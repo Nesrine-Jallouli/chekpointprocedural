@@ -1,0 +1,31 @@
+
+
+  PROCEDURE dot_product(vector_a[]:ARRAY_OF INTEGER[10], vector_b[]:ARRAY_OF INTEGER[10],product:INTEGER) {
+   VAR
+   i: INTEGER :=0;
+   BEGIN
+   FOR i FROM 0 TO vector_a.length DO{
+   product = product + vector_a[i] * vector_b[i];
+   }
+   END
+
+
+ALGORITHM chekpoint-procudural
+VAR
+   i : INTEGER :=0;
+   j, product: INTEGER;
+   vector_a[]:ARRAY_OF INTEGER[10];
+   vector_b[]:ARRAY_OF INTEGER[10];
+BEGIN
+    FOR i FROM 0 TO vector_a.length DO
+    {
+        FOR j FROM i+1 TO j < vector_b.length DO
+        {
+            dot_Product(vector_a[i], vector_b[j],product);
+            IF(product === 0) THEN
+            whrite(vector_a[i] "est" vector_b[j] "sont orthogonal");
+            END-IF
+        }
+
+    }
+END
